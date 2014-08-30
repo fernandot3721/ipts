@@ -141,6 +141,11 @@ a:after {
   padding: 1px;
 }
 
+#headerwrap .col-xs-10 {
+  position: relative;
+  min-height: 1px;
+  padding: 1px;
+}
 
 #headerwrap .btn-block {
 	height: 90px;
