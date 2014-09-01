@@ -204,6 +204,12 @@ a:after {
 	margin-top: 20px;
 }
 
+.carousel-inner > .item > img {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+  line-height: 1;
+}
 
 /*study start*/
 
