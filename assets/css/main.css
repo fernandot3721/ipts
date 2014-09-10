@@ -304,10 +304,10 @@ a:after {
 
 
 
-ul{background-color:#66FF33;list-style-type:none;}
+/*ul{background-color:#66FF33;list-style-type:none;}
 .affix {
   top: 50px;
-}
+}*/
 .affix-top {
   top: 50px;
   position:absolute;
