@@ -327,9 +327,34 @@ a:after {
   }
 }
 
+#ft {
+  background: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center
+}
 
+#ft h3 {
+  color: black;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;  
+}
 
+#ft i {
+  font-size: 8px;
+  color: #fff;
+    padding: 3px;
+}
 
+#ft p {
+  font-size: 20px;
+  color: black;
+}
+
+#ft img {
+  text-align: center;
+}
 
 
 
