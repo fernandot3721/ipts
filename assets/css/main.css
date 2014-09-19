@@ -165,6 +165,10 @@ a:after {
     height:100%;
 }
 
+.btn-primary {
+  background-color: #005B90;
+}
+
 .well-ft {
   min-height: 20px;
   padding: 19px;
@@ -204,11 +208,24 @@ a:after {
 	margin-top: 20px;
 }
 
+.navbar-brand img {
+  height:50px;
+}
+
+#colordiv .navbar-brand {
+  padding:0px;
+}
+
 .carousel-inner > .item > img {
   display: block;
   height: 100%;
   max-width: 100%;
   line-height: 1;
+}
+
+.ft-block {
+  width:19%;
+  display: inline;
 }
 
 /*study start*/
@@ -218,17 +235,17 @@ a:after {
     }
 
     .navbar-inverse {
-        background-color: #428BCA;
+        background-color: #005B90;
     }
 
-    .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+/*    .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
         background-color: #428BCA;
         border-bottom: 3px solid white;
     }
-
-    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+*/
+/*    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
         background-color: #71AB6F;
-    }
+    }*/
 
     .navbar-inverse {
         background-image: none;
@@ -247,7 +264,7 @@ a:after {
     }
 
     .navbar-inverse .navbar-brand:hover {
-        color: #FFFFFF;
+        color: #CCCCCC;
     }
 
     .navbar-inverse .navbar-nav > li > a {
@@ -255,7 +272,7 @@ a:after {
     }
 
     .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-        color: #FFFFFF;
+        color: #CCCCCC;
     }
 
     .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
