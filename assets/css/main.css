@@ -226,6 +226,17 @@ a:after {
 .ft-block {
   width:19%;
   display: inline;
+  opacity:0.4;
+}
+
+.ft-block:hover {
+  width:19%;
+  display: inline;
+  opacity:1.0;
+}
+
+.ft-select {
+  opacity:1.0;
 }
 
 /*study start*/
