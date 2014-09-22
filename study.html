@@ -147,37 +147,40 @@
         </div>
 
 
-        <div class="container">
+<!--         <div class="container">
             <div class="row">
             <img style="width:100%;" src="assets/img/vmad.jpg"/>
             </div>
-         </div>
+         </div> -->
 
     <div class="container">
     <div class="row">
-            <div>
+        <div class="col-md-6">
+            <!-- <div class="well well-sm"> -->
                 <div class="panel panel-default">
+                    <div class="text-center ft-header">New York</div>
                     <div class="panel-body text-center">
-                        <h4>new york</h4>
-                            <div>
-                                <span id="addr1">747 third avenue, 1st and 2nd floors</span><br />
-                                <span id="addr2">manhattan, new york,10017</span><br />
-                                中国地区：+86 136-0281-3555<br />
-                                美国地区：+1 646-480-0093<br />
-                                info@producec.com<br />
-                            </div>
-                        </div>
-                        <div class="row padbig">
-
-                            <div id="map" class="map">
-                            </div>
-
-                           
-                            <!-- <img src="assets/img/map-ny.png"/> -->
+                        <!-- <h4>new york</h4> -->
+                        <div>
+                            <span id="addr1">747 third avenue, 1st and 2nd floors</span><br />
+                            <span id="addr2">manhattan, new york,10017</span><br />
+                            中国地区：+86 136-0281-3555<br />
+                            美国地区：+1 646-480-0093<br />
+                            info@producec.com<br />
                         </div>
                     </div>
                 </div>
+            <!-- </div> -->
+        </div>
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <!-- <div class="row padbig"> -->
+
+                <img src="assets/img/map-ny.png"/>
+                            <!-- <div id="map" class="map"> -->
+                            <!-- </div> -->
             </div>
+        </div>
     </div>
 </div>
 
@@ -300,8 +303,8 @@
       var next = $(e.relatedTarget);
       var to = next.index();
       console.log(from + ' => ' + to);
-      reset_img(from);
-      color_img(to);
+      // reset_img(from);
+      // color_img(to);
       init_map(to);
       init_contact(to);
       

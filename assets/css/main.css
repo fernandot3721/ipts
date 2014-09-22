@@ -226,17 +226,25 @@ a:after {
 .ft-block {
   width:19%;
   display: inline;
-  opacity:0.4;
+  opacity:1.0;
 }
 
 .ft-block:hover {
   width:19%;
   display: inline;
-  opacity:1.0;
+  opacity:0.6;
 }
 
-.ft-select {
+/*.ft-select {
   opacity:1.0;
+}*/
+
+.ft-header {
+  background-color: #F5F5F5;
+  color: #36A0FF;
+  height: 70px;
+  font-size: 27px;
+  padding: 10px;
 }
 
 /*study start*/
