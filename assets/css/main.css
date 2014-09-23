@@ -8,11 +8,22 @@
  */
 
 
+@font-face
+{
+  font-family: Hiragino Sans GB;
+  src: url('../font/Hiragino-Sans-GB-W3.ttf');
+}
 
+@font-face
+{
+  font-family: Hiragino Sans GB;
+  src: url('../font/Hiragino-Sans-GB-W6.ttf');
+  font-weight: bold;
+}
 
 body {
   background-color: #f2f2f2;
-    font-family: 'Oswald', sans-serif, 'EB Garamond', serif;
+    font-family: 'Oswald', sans-serif, 'EB Garamond', serif, 'Hiragino Sans GB';
     font-weight: 300;
     font-size: 16px;
     color: #555;
