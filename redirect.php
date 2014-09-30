@@ -1,6 +1,6 @@
 <?php
-if ($_POST["pass"]=="ipts123") {
-	header("Location: ipts.html");
+if ($_POST["pass"]=="ipts123PPC") {
+	header("Location: iptsback.html");
 	die();
 }
 else {
