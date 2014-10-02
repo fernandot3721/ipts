@@ -203,6 +203,11 @@ fieldset[disabled] .btn-xl.active {
     border-radius: 4px;
     vertical-align: middle;
 }
+
+.ft-bottom {
+    background-color: #005b90;
+    padding: 5px;
+}
 /*end modify by tangjp*/
 
 .navbar-default .navbar-collapse {
