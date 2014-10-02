@@ -235,13 +235,13 @@ a:after {
 }
 
 .ft-block {
-  width:19%;
+  /*width:19%;*/
   display: inline;
   opacity:1.0;
 }
 
 .ft-block:hover {
-  width:19%;
+  /*width:19%;*/
   display: inline;
   opacity:0.6;
 }
