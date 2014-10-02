@@ -20,6 +20,7 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="assets/js/jquery.min.js"></script>
 <!--     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -195,10 +196,10 @@
                     <!-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> -->
                 </div>
             </div>
-            <div class="row text-center" data-toggle="modal" href="#nymap">
+            <div class="row text-center">
             <!-- <div class="row text-center" data-toggle="modal" data-target="#nymap"> -->
                 <div class="col-md-2"></div>
-                <div class="col-md-4">
+                <div class="col-md-4 ft-mymodel" title="NewYork">
                     <span>
                         <img src="assets/img/cc0.png" class="ft-block" alt="New York"/>
                     </span>
@@ -208,7 +209,7 @@
                         美国电话直线：+1 646-480-0093
                     </p>
                 </div>
-                <div class="col-md-4" data-toggle="modal" href="#phmap">
+                <div class="col-md-4 ft-mymodel" title="Phoenix">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc1.png" class="ft-block" alt="Phoinex"/>
                         </span>
@@ -221,7 +222,7 @@
             </div>
 
             <div class="row text-center">
-                <div class="col-md-3" data-toggle="modal" data-target="#hkmap">
+                <div class="col-md-3 ft-mymodel" title="HongKong">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc2.png" class="ft-block" alt="Hong Kong"/>
                         </span>
@@ -231,7 +232,7 @@
                         美国电话直线：+1 646-480-0093
                     </p>
                 </div>
-                <div class="col-md-3" data-toggle="modal" data-target="#gzmap">
+                <div class="col-md-3 ft-mymodel" title="Guangzhou">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc3.png" class="ft-block" alt="GuangZhou"/>
                         </span>
@@ -241,7 +242,7 @@
                         广州电话直线：+86-13602813555
                     </p>
                 </div>
-                <div class="col-md-3" data-toggle="modal" data-target="#whmap">
+                <div class="col-md-3 ft-mymodel" title="Wuhan">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc4.png" class="ft-block" alt="Wuhan"/>
                         </span>
@@ -251,7 +252,7 @@
                         武汉电话直线：+86-13602813555
                     </p>
                 </div>
-                <div class="col-md-3" data-toggle="modal" data-target="#szmap">
+                <div class="col-md-3 ft-mymodel" title="Shenzhen">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc5.png" class="ft-block" alt="Shenzhen"/>
                         </span>
@@ -264,7 +265,7 @@
             </div>
 
             <div class="row text-center">
-                <div class="col-md-3" data-toggle="modal" data-target="#bjmap">
+                <div class="col-md-3 ft-mymodel" title="Beijing">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc6.png"/ class="ft-block" alt="Beijing">
                         </span>
@@ -274,7 +275,7 @@
                         北京电话直线：+86-13602813555
                     </p>
                 </div>
-                <div class="col-md-3" data-toggle="modal" data-target="#shmap">
+                <div class="col-md-3 ft-mymodel" title="Shanghai">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc7.png" class="ft-block" alt="Shanghai"/>
                         </span>
@@ -284,7 +285,7 @@
                         上海电话直线：+86-13602813555
                     </p>
                 </div>
-                <div class="col-md-3" data-toggle="modal" data-target="#symap">
+                <div class="col-md-3 ft-mymodel" title="Shenyang">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc8.png" class="ft-block" alt="Shenyang"/>
                         </span>
@@ -294,7 +295,7 @@
                         沈阳电话直线：+86-13602813555
                     </p>
                 </div>
-                <div class="col-md-3" data-toggle="modal" data-target="#cqmap">
+                <div class="col-md-3 ft-mymodel" title="Chongqing">
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc9.png" class="ft-block" alt="Chongqing"/>
                         </span>
@@ -1165,176 +1166,35 @@
         </div>
     </div>
 
-    <div class="modal fade" id="nymap" tabindex="-1" role="dialog" aria-labelledby="nymapLabel" aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content ft-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                         &times;
                     </button>
-                    <h4 class="modal-title" id="nymapLabel">
+                    <h4 class="modal-title" id="myModalabel">
                         IPTS NEW YORK MAP
                     </h4>
                 </div>
             <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
+                <img id="modelmap" src="assets/img/map-ny.png"/>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="phmap" tabindex="-1" role="dialog" aria-labelledby="phmapLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="phmapLabel">
-                        IPTS PHOENIX MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
-<!-- 
-    <div class="modal fade" id="hkmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS HONG KONG MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div><
-    </div>
+<script type="text/javascript">
 
-    <div class="modal fade" id="gzmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS GUANGZHOU MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="whmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS WUHAN MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
+    var target=$(".ft-mymodel");
+    target.click(function(){
+        var title=$(this).attr("title");
+        $('.modal-title').text("IPTS " + title + " MAP");
+        $('#myModal').modal('show');
+    });
 
-    <div class="modal fade" id="szmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS SHENZHEN MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
+</script>
 
-    <div class="modal fade" id="bjmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS BEIJING MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="shmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS SHANGHAI MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="symap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS SHENYANG MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div><
-
-    <div class="modal fade" id="cqmap" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ft-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">
-                        IPTS CHONGQING MAP
-                    </h4>
-                </div>
-            <div class="modal-body">
-                <img src="assets/img/map-ny.png"/>
-            </div>
-        </div>
-    </div>
- -->
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
