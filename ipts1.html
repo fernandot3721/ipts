@@ -203,9 +203,9 @@
                     <span>
                         <img src="assets/img/cc0.png" class="ft-block" alt="New York"/>
                     </span>
-                    <h4 class="service-heading">New York</h4>
-                    <p class="text-muted">747 third avenue, 1st and 2nd floors<br/>
-                        manhattan, new york,10017<br/>
+                    <h4 class="service-heading">NEW YORK</h4>
+                    <p class="text-muted">747 THIRD AVENUE, 1st and 2nd FLOORS<br/>
+                        MANHATTAN, NEW YORK, 10017<br/>
                         美国电话直线：+1 646-480-0093
                     </p>
                 </div>
@@ -213,9 +213,9 @@
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc1.png" class="ft-block" alt="Phoinex"/>
                         </span>
-                    <h4 class="service-heading">Phoenix</h4>
-                    <p class="text-muted">凤凰城<br/>
-                        凤凰城<br/>
+                    <h4 class="service-heading">PHOENIX</h4>
+                    <p class="text-muted">1 EAST CAMELBACK ROAD, SUITE 300<br/>
+                        PHOENIX, ARIZONA 85012<br/>
                         美国电话直线：+1 646-480-0093
                     </p>
                 </div>
@@ -226,10 +226,10 @@
                     <span class="fa-stack fa-4x">
                         <img src="assets/img/cc2.png" class="ft-block" alt="Hong Kong"/>
                         </span>
-                    <h4 class="service-heading">Hong Kong</h4>
+                    <h4 class="service-heading">HONG KONG</h4>
                     <p class="text-muted">中国香港九龙，环球贸易广场12楼<br/>
                         柯士甸道西1号<br/>
-                        美国电话直线：+1 646-480-0093
+                        香港电话直线：+86-13602813555
                     </p>
                 </div>
                 <div class="col-md-3 ft-mymodel" title="Guangzhou">
@@ -1185,11 +1185,10 @@
 
 <script type="text/javascript">
 
-
-    var target=$(".ft-mymodel");
-    target.click(function(){
+    $(".ft-mymodel").click(function(){
         var title=$(this).attr("title");
         $('.modal-title').text("IPTS " + title + " MAP");
+        $('#modelmap').attr("src", "assets/img/" + title + ".jpg");
         $('#myModal').modal('show');
     });
 
