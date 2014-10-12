@@ -265,6 +265,11 @@ fieldset[disabled] .btn-xl.active {
         margin-left: -15px;
     }
 }
+
+.modal-body img {
+    width: 100%;
+}
+
 /*end modify by tangjp*/
 .navbar-default .navbar-toggle {
     border-color: #fed136;
