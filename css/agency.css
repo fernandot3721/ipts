@@ -244,6 +244,11 @@ fieldset[disabled] .btn-xl.active {
     margin-left: 0;
 }
 
+.copyright {
+    margin-top: 40px;
+    color: white;
+}
+
 @media (min-width:768px) {
     .container {
         width: 820px;
