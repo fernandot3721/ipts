@@ -262,6 +262,10 @@ fieldset[disabled] .btn-xl.active {
 }
 
 /*start modify by tangjp*/
+.navbar-toggle {
+    margin-top: 30px;
+}
+
 .page-scroll {
     width:150px;
     text-align: center;
