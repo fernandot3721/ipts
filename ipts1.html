@@ -1317,15 +1317,58 @@
             <div class="modal-body">
                 <img id="modelmap" src="assets/img/map-ny.png"/>
             </div>
+            <div class="modal-footer">
+                <h2 id="tmap">广州珠江城</h2>
+                <p><strong id="amap">天河区珠江西路15号, 珠江城21楼, 广州, 510623</strong></p>
+                <p id="dmap">
+                </p>
+            </div>
         </div>
     </div>
 
 <script type="text/javascript">
 
+    function getIndex(title) {
+        switch(title) {
+            case "NYWall":
+                return 0;
+            case "NewYork":
+                return 1;
+            case "Phoenix":
+                return 2;
+            case "HongKong":
+                return 3;
+            case "Guangzhou":
+                return 4;
+            case "Wuhan":
+                return 5;
+            case "Shenzhen":
+                return 6;
+            case "Beijing":
+                return 7;
+            case "Shanghai":
+                return 8;
+            case "Shenyang":
+                return 9;
+            case "Chongqing":
+                return 10;
+            default:
+                return 0;
+        }
+    }
+
+    var mapTitle = ["undefine", "New York, New York - 747 Third Avenue", "undefine", "国际金融中心一期", "广州珠江城", "武汉市武汉保利广场", "深圳新世界中心", "北京新华保险大厦中心", "上海都市总部中心", "沈阳财富中心", "重庆长江国际大厦"];
+    var mapAddr = ["undefine", "747 Third Avenue, 1st and 2nd Floors, Manhattan, New York, 10017", "undefine", "中环, 港景街一号, 国际金融中心一期, 国际金融中心一期20楼", "天河区珠江西路15号, 珠江城21楼, 广州, 510623", "武汉市武昌区中南99号武汉保利广场18楼, 武汉, 430071", "新世界中心23楼, 益田路6009号, 福田区, 深圳, 518035", "新华保险大厦15层, 建国门外大街甲12号, 朝阳区, 北京, 100022", "中国上海市黄浦区西藏中路168号, 都市总部大楼25楼, 上海, 200001", "中国辽宁省沈阳市沈河区北站路59号财富中心A座17层, 沈阳, 110013", "中国重庆市南岸区南滨路22号, 长江国际大厦33层, 重庆, 400060"];
+    var mapDesc = ["undefine", "The strikingly beautiful and modern 747 Third Avenue business center occupies a prime location in Midtown Manhattan, close to Grand Central Terminal. The business center is on the second floor and features an open co-working floor plan, perfect for mobile workers, as well as full-height windows offering comfortable natural light throughout the floor. The center also has private offices on the mezzanine level, overlooking the open floor plan, with perfect views to the city streets below. Private meeting rooms as well as open space to collaborate are perfect for individuals and groups to conduct business. Corporate neighbors include international and national companies in the finance sector, several in general trading, real estate and creative industries such as publishing. As well as Grand Central, the business center is close to major subway lines and buses, with strategic road and heliport access to major New York Airports.", "undefine", "国际金融中心一期如其名所言，地处香港特区这个繁荣银行和商业区的核心地带。这幢210米高的摩天大楼坐落于港景街，后勤保障服务齐全。凭借英国殖民统治期间积蓄的传统实力，金融和银行业对香港经济贡献巨大，这些行业的从业人数几乎是批发、零售和饭店行业的两倍。准备在香港拓展业务的企业会发现香港有许多外国领事馆，外事业务非常方便。此外，国际金融中心一期附近有许多专业服务公司，能够提供高质量的咨询服务。", "珠江城是全球最著名的节能环保建筑之一，大厦装有风力涡轮机和太阳能电池板等发电节能装置。雷格斯商务中心就位于该国际甲级商业地标第21层。大厦配套设施齐全，是集商务会所、全景大厅和豪华酒店等于一体的综合服务大厦。凭借地处城市购物区和公共交通枢纽的便利位置，珠江城吸引了服务、咨询、金融和银行等行业企业的入驻，其中包括中国银行和工商银行等。", "保利广场地处武昌中央商务区，位于武汉最成熟的商业中心之一的洪山广场西北角，吸引了金融服务、采购和贸易等行业进驻。广场距湖北省政府办公楼仅需步行。这幢现代化的标志性建筑共有46层，包括甲级写字楼、购物中心、餐馆和剧院，雷格斯商务中心位于十八层。保利广场拥有便捷的地下通道可直接通往洪山广场地铁站搭乘地铁2号线或4号线，成为武汉方便的交通枢纽。拥有如此中央和便捷的地址位置，雷格斯保利广场中心为正在寻找灵活办公空间和全面配套服务的公司提供了价格合理的最佳选择方案。", "雷格斯商务中心坐落于深圳新世界中心23楼，一个位于福田区核心地段的地标性建筑。该大楼包括一、二层银行机构，多功能会议厅和星级酒店。中心紧邻市政府和金融机构，为各个企业的运作提供了便捷高效的支持。新世界中心距离大陆-香港过境口岸皇岗仅10分钟车程。独特的位置也吸引了来自各个行业企业的入驻，如IT、媒体和贸易行业。此外，三星、香港英皇娱乐集团、深圳报业集团等也在此设立了办公室。", "北京新华保险大厦是地处中央商务区核心地带的著名高端写字楼，紧邻天安门广场和国家政府机关，已经成为长安街上的标志性高层建筑。中央商务区是北京经济最活跃、现代化程度最高的区域，金融、保险、贸易、电信和咨询行业的众多世界一流公司均在此设有办公机构。到中国世贸中心、中信银行大厦、国际俱乐部、使馆区和日坛公园绿地都很方便。雷格斯商务中心位于新华保险大厦15层，部分房间可以欣赏北京全景。", "都市总部大楼位于上海核心地段和最大的交通枢纽之一人民广场的东侧，毗邻上海市政府。 周边建筑有外滩中心、来福士广场，以及JW万豪酒店、威斯汀酒店、索菲特海仑酒店、国际饭店等五星级酒店。从雷格斯商务中心所在楼层凭窗远眺，可将人民广场、繁华的南京路和金融中心等城市全景尽收眼底。附近有延安路高架、成都路高架、地铁1、2、8号线，公共交通十分便利，吸引了百事、葛兰素史克、施华洛世奇、宏基和彪马等世界知名的跨国公司和全球财富500强企业的入驻。", "Regus Fortune Plaza is located in the core of Shenyang CBD, only minutes away from Shenyang City Hall and City Hall Square. Regus Fortune Plaza centre is on the 17th floor of this modern Grade-A office tower. National and local banks, hotels such as the Glory hotel, high-end commercial and shopping complexes can be found in the direct proximity. The centre is only a 5 minute walk to Shenyang North Railway Station and Metro Line 2 Shenyang Beizhan Station, and a 30 minute drive to Shenyang Taoxian International Airport. Regus Fortune Plaza is the ideal choice for both international and domestic companies in a variety of industries.", "位于长江国际大厦33层，长江国际是拥有双塔楼的综合体建筑：塔楼一为拥有奢华服务设施的五星级酒店丽笙世嘉酒店，塔楼二为全江景甲级写字楼。大楼紧靠长江大桥南桥头，毗邻解放碑CBD，紧邻会展中心和南坪商圈，附近各类设施完备。 长江国际大厦紧邻南滨路，与长江大桥互通式立交贯联，距机场25公里，距即将开通的轻轨三号线步行仅十分钟，到解放碑仅10分钟的车程，交通极为便利。"];
+
     $(".ft-mymodel").click(function(){
-        var title=$(this).attr("title");
+        var title = $(this).attr("title");
+        var index = getIndex(title);
         $('.modal-title').text("IPTS " + title + " MAP");
         $('#modelmap').attr("src", "assets/img/" + title + ".jpg");
+        $('#tmap').text(mapTitle[index]);
+        $('#amap').text(mapAddr[index]);
+        $('#dmap').text(mapDesc[index]);
         $('#myModal').modal('show');
     });
 
