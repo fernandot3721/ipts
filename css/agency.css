@@ -281,6 +281,21 @@ fieldset[disabled] .btn-xl.active {
     text-align: left;
 }
 
+.green-font {
+    color:green;
+    font-weight: bold;
+}
+
+.blue-font {
+    color:blue;
+    font-weight: bold;
+}
+
+.red-font {
+    color:red;
+    font-weight: bold;
+}
+
 /*end modify by tangjp*/
 .navbar-default .navbar-toggle {
     border-color: #fed136;
