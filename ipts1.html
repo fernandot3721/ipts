@@ -583,9 +583,11 @@
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4><br/>Cantact us</h4>
-                            </div>
+                            <a href="#contact">
+                                <div class="timeline-image">
+                                    <h4><br/>Cantact us</h4>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                     <div class="col-lg-12 text-center">
@@ -885,29 +887,31 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm" action="http://www.ipage.com/scripts/formemail.bml" method="post" novalidate>
+                        <input type="hidden" name="my_email" value="info@ipts.us">
+                        <input type="hidden" name="thankyou_url" value="#">
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="名字 NAME" id="name" required data-validation-required-message="Please enter your name.">
+                                    <input type="text" class="form-control" placeholder="名字 NAME" id="name" required data-validation-required-message="请留下您的名字，方便我们和您联系">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="电话 PHONE" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="电话 PHONE" id="email" required data-validation-required-message="请留下您的电话，方便我们和您联系">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="邮箱 EMAIL" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="邮箱 EMAIL" id="phone" required data-validation-required-message="请留下您的邮箱，方便我们和您联系">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="微信 QQ" id="wechat" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="微信 QQ" id="wechat" required data-validation-required-message="请留下您的QQ号，方便我们和您联系">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="留言 MESSAGE" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" placeholder="留言 MESSAGE" id="message" required data-validation-required-message="请留言给我们"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
