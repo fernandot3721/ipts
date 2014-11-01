@@ -17,8 +17,6 @@ $(function() {
 
             var cbxIntrest = new Array();
             $('input:checkbox:checked[name="intrest"]').each(function(i) { cbxIntrest[i] = this.value; });
-            console.log("intrest: " + cbxIntrest);
-
 
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
