@@ -11,7 +11,7 @@ $(function() {
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
-            var wechart = $("input#wechat").val();
+            var wechat = $("input#wechat").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
 

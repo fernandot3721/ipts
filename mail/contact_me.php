@@ -21,8 +21,8 @@ $intrestList = implode (",", $intrestedIn);
 	
 // Create the email and send the message
 $to = 'info@ipts.us'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "IPTS visitor's message'";
-$email_body = "IPTS visitor:$name leave a message as follows:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nintrestedIn: $intrestList\n\nMessage:\n$message";
+$email_subject = "IPTS visitor's message";
+$email_body = "IPTS visitor:$name leave a message as follows:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nWechat: $wechat\n\nintrestedIn: $intrestList\n\nMessage:\n$message";
 $headers = "From: info@ipts.us\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
