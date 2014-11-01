@@ -11,9 +11,15 @@ $(function() {
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
+            var wechart = $("input#wechat").val();
             var message = $("textarea#message").val();
-            var tour = $("input#checkbox1").val();
             var firstName = name; // For Success/Failure Message
+
+            var cbxIntrest = new Array();
+            $('input:checkbox:checked[name="intrest"]').each(function(i) { cbxIntrest[i] = this.value; });
+            console.log("intrest: " + cbxIntrest);
+
+
             // Check for white space in name for Success/Fail message
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
@@ -25,8 +31,9 @@ $(function() {
                     name: name,
                     phone: phone,
                     email: email,
+                    wechat: wechat,
                     message: message,
-                    tour: tour
+                    intrestedIn: cbxIntrest
                 },
                 cache: false,
                 success: function() {
