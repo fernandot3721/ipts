@@ -296,6 +296,13 @@ fieldset[disabled] .btn-xl.active {
     font-weight: bold;
 }
 
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 /*end modify by tangjp*/
 .navbar-default .navbar-toggle {
     border-color: #fed136;
